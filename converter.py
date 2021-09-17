@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-from typing import List, Tuple, NewType
+from typing import Tuple, NewType
 from PIL import Image
-
+from sys import argv
 
 Pixel = NewType("Pixel", Tuple[int, int, int, int])
 
@@ -50,7 +50,7 @@ class Counter:
 
 def main() -> None:
 
-    IMAGE_NAME = 'image.jpg'
+    IMAGE_NAME = argv[1]
     image = Image.open(IMAGE_NAME)
 
     print(image.size, image.mode, image.size, image.getcolors())
