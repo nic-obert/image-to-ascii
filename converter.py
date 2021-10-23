@@ -34,7 +34,7 @@ def map_intensity_to_character(intensity: float) -> CHARACTERS:
 
 
 def get_pixel_intensity(pixel: Pixel) -> float:
-    return sum(pixel) / 1020 # 1020 = 255 * 4
+    return sum(pixel) / MAX_CHANNEL_VALUES
 
 
 def print_ascii_art(size: Tuple[int, int], characters: str):
